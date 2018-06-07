@@ -1,0 +1,21 @@
+package lista18;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ex2b {
+
+	public static void main(String[] args) {
+		String sinopse;
+		int palavras = 0;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira a sinopse de um filme");
+		sinopse = entrada.nextLine();
+		for(int cont = 0;cont < sinopse.length(); cont++){
+			if(sinopse.charAt(cont) ==' '){
+				palavras += 1;
+			}
+		}
+		System.out.println("O numero de palavras da sinopse é " + (palavras+1));
+	}
+}
