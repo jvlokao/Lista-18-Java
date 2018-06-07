@@ -1,0 +1,30 @@
+package lista18;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ex2e {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> filmes = new ArrayList();
+		Scanner entrada = new Scanner(System.in);
+		int numfilmes;
+		System.out.println("Quantos filmes deseja inserir");
+		numfilmes = entrada.nextInt();
+		entrada.nextLine();
+		for(int i=0;i<numfilmes;i++){
+			filmes.add(entrada.nextLine());
+		}
+		for(int i=0;i<filmes.size();i++){
+			String[] nome = filmes.get(i).split(" ");
+			for(int j = 0; j<nome.length;j++){
+				char letra1 = nome[j].charAt(0);
+				letra1 = Character.toUpperCase(letra1);
+				nome[j] = nome[j].replace(nome[j].charAt(0), letra1);
+				System.out.print(nome[j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
