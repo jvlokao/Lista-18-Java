@@ -1,0 +1,27 @@
+ex2d
+package lista18;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ex2d {
+
+	public static void main(String[] args) {
+		ArrayList<String> diretores = new ArrayList();
+		Scanner entrada = new Scanner(System.in);
+		int numdiretores;
+		System.out.println("Quantos diretores deseja inserir");
+		numdiretores = entrada.nextInt();
+		entrada.nextLine();
+		for(int i=0;i<numdiretores;i++){
+			diretores.add(entrada.nextLine());
+		}
+		for(int i=0;i<diretores.size();i++){
+			String[] nome = diretores.get(i).split(" ");
+			System.out.println("O nome completo do diretor é: "+diretores.get(i)+". E as iniciais são: ");
+			for(int j = 0; j<nome.length;j++){
+				System.out.print(nome[j].charAt(0)+"");
+			}
+			System.out.println();
+		}
+	}
