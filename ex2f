@@ -1,1 +1,37 @@
+package lista18;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ex2f {
+
+	public static void main(String[] args) {
+		ArrayList<String> filmes = new ArrayList();
+		ArrayList<String> dados = new ArrayList();
+		Scanner entrada = new Scanner(System.in);
+		String filme;
+		int aux = 0;
+		filmes.add(0,"Planeta dos Macacos");
+		filmes.add(1,"Ilha dos desesperados");
+		dados.add(0,"1");
+		dados.add(1,"2");
+		System.out.println("Filmes disponiveis");
+		System.out.println("---------------------------------------");
+		System.out.println("Planeta dos Macacos");
+		System.out.println("Ilha dos desesperados");
+		System.out.println("---------------------------------------");
+		System.out.println("Qual filme deseja ver os dados?");
+		filme = entrada.nextLine();
+		for(int i=0;i<filmes.size();i++){
+			if((filme.equals(filmes.get(i)))==true){
+				System.out.println(dados.get(filmes.indexOf(filme)));
+				aux = 1;
+			}
+		}
+		if(aux!=1){
+			System.out.println("O filme inserido não existe no banco de dados ou");
+			System.out.println("Verifique se inseriu o nome do filme corretamente");
+		}
+	}
+}
 
